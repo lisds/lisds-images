@@ -12,7 +12,7 @@ fi
 
 name=$(basename $(realpath $pth))
 tag=$(git rev-parse --short HEAD)
-user=matthewbrett
+user=lisds
 img_name="${name}:${tag}"
 full_name="${user}/${img_name}"
 
