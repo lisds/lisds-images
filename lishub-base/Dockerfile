@@ -40,3 +40,7 @@ RUN if [[ -n "$PIP_OVERRIDES" ]]; then \
 
 # Uncomment the line below to make nbgitpuller default to start up in JupyterLab
 #ENV NBGITPULLER_APP=lab
+
+# Configure lab to open Jupytext docs in notebook interface.
+RUN wget https://raw.githubusercontent.com/mwouts/jupytext/main/binder/labconfig/default_setting_overrides.json \
+    -P  ~/.jupyter/labconfig/
