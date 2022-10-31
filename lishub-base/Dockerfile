@@ -23,6 +23,7 @@ RUN apt-get update \
         make \
         pkg-config \
         libsecret-1-dev \
+        zip \
  && rm -rf /var/lib/apt/lists/*
 
 USER $NB_USER
