@@ -32,7 +32,7 @@ RUN python -m pip install --no-cache-dir \
     -r /tmp/requirements.txt
 
 # Install nbzip
-RUN jupyter serverextension enable --py nbzip --sys-prefix
+RUN jupyter serverextension enable --py nbzip 
 RUN jupyter nbextension install --py nbzip
 RUN jupyter nbextension enable --py nbzip
 
