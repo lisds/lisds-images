@@ -32,8 +32,7 @@ RUN python -m pip install --no-cache-dir \
     -r /tmp/requirements.txt
 
 # Install nbzip
-RUN jupyter serverextension enable --py nbzip 
-RUN jupyter nbextension install --py nbzip
+RUN jupyter nbextension install --py nbzip --sys-prefix
 RUN jupyter nbextension enable --py nbzip
 
 # Support overriding a package or two through passed docker --build-args.
