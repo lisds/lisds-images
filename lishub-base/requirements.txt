@@ -16,3 +16,7 @@ scikit-learn
 jupytext
 okpy
 folium
+seaborn
+openpyxl
+
+nbzip
