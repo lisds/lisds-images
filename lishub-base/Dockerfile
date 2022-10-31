@@ -31,10 +31,6 @@ COPY requirements.txt /tmp/requirements.txt
 RUN python -m pip install --no-cache-dir \
     -r /tmp/requirements.txt
 
-# Install nbzip
-RUN jupyter nbextension install --py nbzip --sys-prefix
-RUN jupyter nbextension enable --py nbzip
-
 # Support overriding a package or two through passed docker --build-args.
 # ARG PIP_OVERRIDES="jupyterhub==1.3.0"
 ARG PIP_OVERRIDES=

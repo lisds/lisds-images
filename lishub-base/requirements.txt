@@ -19,4 +19,4 @@ folium
 seaborn
 openpyxl
 
-nbzip
+jupyter-tree-download
