@@ -22,4 +22,5 @@ spaCy
 nltk
 sympy
 
+ipywidgets
 jupyter-tree-download
