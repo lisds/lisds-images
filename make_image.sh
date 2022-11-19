@@ -16,7 +16,7 @@ user=lisacuk
 img_name="${name}:${tag}"
 full_name="${user}/${img_name}"
 
-docker build -t ${full_name} ${pth}
+docker buildx build --platform linux/amd64 -t ${full_name} ${pth}
 
 echo "To deploy:"
 echo
