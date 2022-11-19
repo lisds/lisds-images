@@ -12,9 +12,10 @@ fi
 
 name=$(basename $(realpath $pth))
 tag=$(git rev-parse --short HEAD)
-user=lisacuk
+hub_org=lisacuk
+user=lisds
 img_name="${name}:${tag}"
-full_name="${user}/${img_name}"
+full_name="${hub_org}/${img_name}"
 
 docker buildx build --platform linux/amd64 -t ${full_name} ${pth}
 
