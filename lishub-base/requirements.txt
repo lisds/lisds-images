@@ -18,5 +18,7 @@ okpy
 folium
 seaborn
 openpyxl
+spaCy
+nltk
 
 jupyter-tree-download

@@ -24,6 +24,7 @@ RUN apt-get update \
         pkg-config \
         libsecret-1-dev \
         zip \
+        vim \
  && rm -rf /var/lib/apt/lists/*
 
 USER $NB_USER
