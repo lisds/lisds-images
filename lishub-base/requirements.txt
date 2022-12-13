@@ -20,5 +20,6 @@ seaborn
 openpyxl
 spaCy
 nltk
+sympy
 
 jupyter-tree-download

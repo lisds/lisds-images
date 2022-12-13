@@ -47,8 +47,6 @@ RUN if [[ -n "$PIP_OVERRIDES" ]]; then \
 RUN wget https://raw.githubusercontent.com/mwouts/jupytext/main/binder/labconfig/default_setting_overrides.json \
     -P  ~/.jupyter/labconfig/
 
-RUN pip install sympy
-
 # Enable interactive widgets
 # https://stackoverflow.com/questions/36351109/ipython-notebook-ipywidgets-does-not-show#38001920
 RUN pip install ipywidgets
