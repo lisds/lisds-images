@@ -21,6 +21,7 @@ openpyxl
 spaCy
 nltk
 sympy
+manim
 
 ipywidgets
 jupyter-tree-download
