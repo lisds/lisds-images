@@ -47,6 +47,9 @@ RUN if [[ -n "$PIP_OVERRIDES" ]]; then \
 RUN wget https://raw.githubusercontent.com/mwouts/jupytext/main/binder/labconfig/default_setting_overrides.json \
     -P  ~/.jupyter/labconfig/
 
+# https://jupytext.readthedocs.io/en/latest/install.html
+RUN jupyter serverextension enable jupytext
+
 # Enable interactive widgets
 # https://stackoverflow.com/questions/36351109/ipython-notebook-ipywidgets-does-not-show#38001920
 RUN jupyter nbextension enable --py widgetsnbextension
