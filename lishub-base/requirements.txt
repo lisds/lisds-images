@@ -4,8 +4,8 @@
 # for the corresponding jupyterhub release - e.g. 2.1.1.
 # Make sure that version matches below.
 
-jupyterhub==2.3.1
-nbgitpuller==1.0.2
+jupyterhub==3.1.1
+nbgitpuller==1.1.1
 
 scipy
 matplotlib
