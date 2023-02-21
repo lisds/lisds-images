@@ -21,6 +21,9 @@ openpyxl
 spaCy
 nltk
 sympy
+nibabel
+nipraxis>=0.3.5
+pytest
 
 ipywidgets
 jupyter-tree-download
