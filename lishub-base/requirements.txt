@@ -25,6 +25,7 @@ nibabel
 nipraxis>=0.3.5
 pytest
 gensim
+nbclassic<5
 
 ipywidgets
 jupyter-tree-download
