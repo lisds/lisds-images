@@ -55,7 +55,7 @@ RUN echo 'c.NotebookApp.contents_manager_class = "jupytext.TextFileContentsManag
 
 # Open .md notebooks with the Notebook editor
 RUN mkdir -p ${HOME}/.jupyter/labconfig
-COPY --chown $NB_USER labconfig /home/$NB_USER/.jupyter/labconfig
+COPY --chown=$NB_USER labconfig /home/$NB_USER/.jupyter/labconfig
 
 # Enable interactive widgets
 # https://stackoverflow.com/questions/36351109/ipython-notebook-ipywidgets-does-not-show#38001920
