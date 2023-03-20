@@ -53,6 +53,10 @@ RUN jupyter serverextension enable jupytext
 # Try manual enable of Jupytext
 RUN echo 'c.NotebookApp.contents_manager_class = "jupytext.TextFileContentsManager"' >> .jupyter/jupyter_notebook_config.py
 
+# Open .md notebooks with the Notebook editor
+RUN mkdir -p ${HOME}/.jupyter/labconfig
+COPY --chown $NB_USER labconfig /home/$NB_USER/.jupyter/labconfig
+
 # Enable interactive widgets
 # https://stackoverflow.com/questions/36351109/ipython-notebook-ipywidgets-does-not-show#38001920
 RUN jupyter nbextension enable --py widgetsnbextension
