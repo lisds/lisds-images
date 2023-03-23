@@ -27,6 +27,10 @@ RUN apt-get update \
         vim \
  && rm -rf /var/lib/apt/lists/*
 
+# Fix suggested by Damian on support thread
+RUN wget https://raw.githubusercontent.com/mwouts/jupytext/main/binder/labconfig/default_setting_overrides.json \
+    -P  /opt/conda/etc/jupyter/labconfig/
+
 USER $NB_USER
 
 COPY requirements.txt /tmp/requirements.txt
@@ -49,13 +53,6 @@ RUN wget https://raw.githubusercontent.com/mwouts/jupytext/main/binder/labconfig
 
 # https://jupytext.readthedocs.io/en/latest/install.html
 RUN jupyter serverextension enable jupytext
-
-# Try manual enable of Jupytext
-RUN echo 'c.NotebookApp.contents_manager_class = "jupytext.TextFileContentsManager"' >> .jupyter/jupyter_notebook_config.py
-
-# Open .md notebooks with the Notebook editor
-RUN mkdir -p ${HOME}/.jupyter/labconfig
-COPY --chown=$NB_USER labconfig /home/$NB_USER/.jupyter/labconfig
 
 # Enable interactive widgets
 # https://stackoverflow.com/questions/36351109/ipython-notebook-ipywidgets-does-not-show#38001920
