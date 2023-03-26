@@ -26,6 +26,7 @@ nipraxis>=0.3.5
 pytest
 gensim
 numba
+notebook<6
 nbclassic<5
 
 ipywidgets
