@@ -31,6 +31,10 @@ RUN apt-get update \
 RUN wget https://raw.githubusercontent.com/mwouts/jupytext/main/binder/labconfig/default_setting_overrides.json \
     -P  /opt/conda/etc/jupyter/labconfig/
 
+# This is a **TEMPORARY** workaround for https://github.com/mwouts/jupytext/issues/1051
+# Please make sure to remove this when a fix is provided in nbclassic
+RUN pip install git+https://github.com/mwouts/nbclassic.git@do_not_redirect_notebook_to_files
+
 USER $NB_USER
 
 COPY requirements.txt /tmp/requirements.txt
@@ -46,10 +50,6 @@ RUN if [[ -n "$PIP_OVERRIDES" ]]; then \
 
 # Uncomment the line below to make nbgitpuller default to start up in JupyterLab
 #ENV NBGITPULLER_APP=lab
-
-# Configure lab to open Jupytext docs in notebook interface.
-RUN wget https://raw.githubusercontent.com/mwouts/jupytext/main/binder/labconfig/default_setting_overrides.json \
-    -P  ~/.jupyter/labconfig/
 
 # https://jupytext.readthedocs.io/en/latest/install.html
 RUN jupyter serverextension enable jupytext
