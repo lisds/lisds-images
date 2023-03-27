@@ -31,15 +31,15 @@ RUN apt-get update \
 RUN wget https://raw.githubusercontent.com/mwouts/jupytext/main/binder/labconfig/default_setting_overrides.json \
     -P  /opt/conda/etc/jupyter/labconfig/
 
-# This is a **TEMPORARY** workaround for https://github.com/mwouts/jupytext/issues/1051
-# Please make sure to remove this when a fix is provided in nbclassic
-RUN pip install git+https://github.com/mwouts/nbclassic.git@do_not_redirect_notebook_to_files
-
 USER $NB_USER
 
 COPY requirements.txt /tmp/requirements.txt
 RUN python -m pip install --no-cache-dir \
     -r /tmp/requirements.txt
+
+# This is a **TEMPORARY** workaround for https://github.com/mwouts/jupytext/issues/1051
+# Please make sure to remove this when a fix is provided in nbclassic
+RUN pip install git+https://github.com/mwouts/nbclassic.git@do_not_redirect_notebook_to_files
 
 # Support overriding a package or two through passed docker --build-args.
 # ARG PIP_OVERRIDES="jupyterhub==1.3.0"
