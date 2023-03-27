@@ -28,6 +28,7 @@ gensim
 numba
 notebook
 nbclassic
+pygame
 
 ipywidgets
 jupyter-tree-download
