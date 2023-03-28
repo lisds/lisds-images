@@ -29,6 +29,7 @@ numba
 notebook
 nbclassic
 pygame
+nbwc
 
 ipywidgets
 jupyter-tree-download
