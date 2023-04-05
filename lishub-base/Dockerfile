@@ -37,10 +37,6 @@ COPY requirements.txt /tmp/requirements.txt
 RUN python -m pip install --no-cache-dir \
     -r /tmp/requirements.txt
 
-# This is a **TEMPORARY** workaround for https://github.com/mwouts/jupytext/issues/1051
-# Please make sure to remove this when a fix is provided in nbclassic
-RUN pip install git+https://github.com/mwouts/nbclassic.git@do_not_redirect_notebook_to_files
-
 # Support overriding a package or two through passed docker --build-args.
 # ARG PIP_OVERRIDES="jupyterhub==1.3.0"
 ARG PIP_OVERRIDES=
@@ -50,9 +46,6 @@ RUN if [[ -n "$PIP_OVERRIDES" ]]; then \
 
 # Uncomment the line below to make nbgitpuller default to start up in JupyterLab
 #ENV NBGITPULLER_APP=lab
-
-# https://jupytext.readthedocs.io/en/latest/install.html
-RUN jupyter serverextension enable jupytext
 
 # Enable interactive widgets
 # https://stackoverflow.com/questions/36351109/ipython-notebook-ipywidgets-does-not-show#38001920
