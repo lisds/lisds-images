@@ -24,6 +24,7 @@ RUN apt-get update \
         pkg-config \
         libsecret-1-dev \
         zip \
+        unzip \
         vim \
  && rm -rf /var/lib/apt/lists/*
 
