@@ -28,9 +28,6 @@ RUN apt-get update \
         vim \
  && rm -rf /var/lib/apt/lists/*
 
-# Fix suggested by Damian on support thread
-RUN wget https://raw.githubusercontent.com/mwouts/jupytext/main/binder/labconfig/default_setting_overrides.json \
-    -P  /opt/conda/etc/jupyter/labconfig/
 
 USER $NB_USER
 
