@@ -28,6 +28,8 @@ RUN apt-get update \
         vim \
  && rm -rf /var/lib/apt/lists/*
 
+# Set nbclassic no banner.
+COPY jupyterhub_config.py /etc/jupyterhub/
 
 USER $NB_USER
 
