@@ -18,6 +18,7 @@ okpy
 folium
 seaborn
 openpyxl
+pyreadstat
 spaCy
 nltk
 sympy
