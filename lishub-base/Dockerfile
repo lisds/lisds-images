@@ -26,6 +26,10 @@ RUN apt-get update \
         zip \
         unzip \
         vim \
+        r-base \
+        libcurl4-openssl-dev \
+        libssl-dev \
+        libxml2-dev \
  && rm -rf /var/lib/apt/lists/*
 
 # Set nbclassic no banner.
