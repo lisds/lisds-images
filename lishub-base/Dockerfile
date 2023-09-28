@@ -45,7 +45,7 @@ RUN if [[ -n "$PIP_OVERRIDES" ]]; then \
     fi
 
 # Uncomment the line below to make nbgitpuller default to start up in JupyterLab
-#ENV NBGITPULLER_APP=lab
+ENV NBGITPULLER_APP=lab
 
 # Enable interactive widgets
 # https://stackoverflow.com/questions/36351109/ipython-notebook-ipywidgets-does-not-show#38001920

@@ -22,16 +22,18 @@ spaCy
 nltk
 sympy
 nibabel
-nipraxis>=0.3.5
+nipraxis
 pytest
 gensim
 numba
 notebook
-# https://github.com/mwouts/jupytext/issues/1051
-nbclassic>=0.5.5
+nbclassic
+otter-grader
 pygame
 nbwc
 lxml
+SQLAlchemy
+beautifulsoup4
 
 ipywidgets
 jupyter-tree-download
