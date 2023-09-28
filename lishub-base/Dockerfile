@@ -1,7 +1,10 @@
 FROM jupyter/base-notebook:latest
-# Built from... https://hub.docker.com/r/jupyter/base-notebook/
-#               https://github.com/jupyter/docker-stacks/blob/HEAD/base-notebook/Dockerfile
-# Built from... Ubuntu 20.04
+# Built from...
+#    https://hub.docker.com/r/jupyter/base-notebook/
+#    https://github.com/jupyter/docker-stacks/blob/HEAD/base-notebook/Dockerfile which uses
+#    https://github.com/jupyter/docker-stacks/blob/main/images/docker-stacks-foundation/Dockerfile
+#
+# As of Sept 2023 this starts from Ubuntu 22.04 (see docker-stacks-foundation).
 
 # VULN_SCAN_TIME=2022-02-22_01:13:56
 
@@ -30,6 +33,8 @@ RUN apt-get update \
         libcurl4-openssl-dev \
         libssl-dev \
         libxml2-dev \
+        liblzma-dev \
+        libbz2-dev \
  && rm -rf /var/lib/apt/lists/*
 
 # Set nbclassic no banner.
