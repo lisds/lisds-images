@@ -38,3 +38,4 @@ beautifulsoup4
 
 ipywidgets
 jupyter-tree-download
+git+https://github.com/pxr687/jupyprint.git
