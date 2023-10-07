@@ -37,6 +37,12 @@ RUN apt-get update \
         libbz2-dev \
  && rm -rf /var/lib/apt/lists/*
 
+# Install Quarto
+RUN curl -L https://github.com/quarto-dev/quarto-cli/releases/download/v1.3.450/quarto-1.3.450-linux-amd64.deb -o quarto.deb && \
+    dpkg --install quarto.deb && \
+    apt -f install && \
+    rm quarto.deb
+
 # Set nbclassic no banner.
 COPY jupyterhub_config.py /etc/jupyterhub/
 
