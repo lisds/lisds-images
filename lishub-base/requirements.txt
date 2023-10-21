@@ -35,6 +35,8 @@ nbwc
 lxml
 SQLAlchemy
 beautifulsoup4
+plotly
+geopandas
 
 ipywidgets
 jupyter-tree-download
