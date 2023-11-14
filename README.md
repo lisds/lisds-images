@@ -1,22 +1,34 @@
-# Nipraxis Docker file for JupyterHub
+# LIS Docker defines for JupyterHub
 
 ## Build the image locally
 
+With a given (specified) tag of `v002`:
+
 ```
-docker build -t matthewbrett/nipraxis:v002 .
+docker build -t lisds/lisds-images:v002 .
+```
+
+Or you can use the `make_image.sh` script to build with a tag from the current commit:
+
+```
+./make_image.sh lishub-base
 ```
 
 ## Dockerhub
 
-The image can be pushed up to Dockerhub directly::
+The image can be pushed up to Dockerhub directly.  This is the manual incantation:
 
 ```
-docker login --username=matthewbrett
-docker push matthewbrett/nipraxis:001
+docker login --username=lisds
+docker push lisds/lisds-images:v002
 ```
 
-If you get a "User interaction is not allowed." error at the ``login`` stage,
-you may get further by running this command at the affected terminal::
+You will also see the relevant instructions at the end of output from
+`./make_image.sh` above.
+
+If you get a "User interaction is not allowed." error at the ``login``
+stage, you may get further by running this command at the affected
+terminal:
 
 ```
 security unlock-keychain
@@ -28,7 +40,7 @@ See
 ## Testing locally
 
 ```bash
-docker run -it --rm -p 8888:8888 matthewbrett/nipraxis:001
+docker run -it --rm -p 8888:8888 lisds/lisds-images:002
 ```
 
 then attach to <http://localhost:8888>.
@@ -36,5 +48,5 @@ then attach to <http://localhost:8888>.
 This incantation allows `sudo` access and drops into a Bash shell.
 
 ```bash
-docker run -it --rm -p 8888:8888 -e GRANT_SUDO=yes matthewbrett/nipraxis:001 /bin/bash
+docker run -it --rm -p 8888:8888 -e GRANT_SUDO=yes lisds/lisds-images:002 /bin/bash
 ```
