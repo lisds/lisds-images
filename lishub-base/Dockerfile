@@ -35,6 +35,7 @@ RUN apt-get update \
         libxml2-dev \
         liblzma-dev \
         libbz2-dev \
+        ne \
  && rm -rf /var/lib/apt/lists/*
 
 # Install Quarto
