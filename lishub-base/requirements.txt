@@ -37,6 +37,7 @@ SQLAlchemy
 beautifulsoup4
 plotly
 geopandas
+wget
 
 ipywidgets
 jupyter-tree-download
