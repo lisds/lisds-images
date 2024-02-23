@@ -39,6 +39,9 @@ plotly
 geopandas
 wget
 
+# To silence Pandas warning
+pyarrow
+
 ipywidgets
 jupyter-tree-download
 git+https://github.com/pxr687/jupyprint.git
