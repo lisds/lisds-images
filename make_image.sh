@@ -17,6 +17,7 @@ user=lisds
 img_name="${name}:${tag}"
 full_name="${hub_org}/${img_name}"
 
+echo Building...
 docker buildx build --platform linux/amd64 -t ${full_name} ${pth}
 
 echo "To deploy:"
