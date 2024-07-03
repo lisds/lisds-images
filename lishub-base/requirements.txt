@@ -1,11 +1,15 @@
-# Check the Helm chart version for the JupyterHub instances.
-# Then check at
-# https://jupyterhub.github.io/helm-chart/#development-releases-jupyterhub
-# for the corresponding jupyterhub release - e.g. 2.1.1.
+# Go to https://ds.lis.2i2c.cloud/hub/admin and look at the
+# bottom left for the JupyterHub App version. e.g 4.1.5.
 # Make sure that version matches below.
 
-jupyterhub==3.1.1
-nbgitpuller==1.1.1
+# Or: check the Helm chart version for the JupyterHub instances somehow,
+# then check at
+# https://jupyterhub.github.io/helm-chart/#development-releases-jupyterhub
+# for the jupyterhub app version corresponding to the Helm chart release.
+jupyterhub==4.1.5
+
+# Choose some version, maybe from PyPI, that matches the JupyterHub version.
+nbgitpuller==1.2.1
 
 scipy
 matplotlib
