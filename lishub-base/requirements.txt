@@ -46,7 +46,7 @@ wget
 myst_nb
 kaleido
 
-# To silence Pandas warning
+# To silence Pandas warning for Pandas > 2.1ish.
 pyarrow
 
 ipywidgets
