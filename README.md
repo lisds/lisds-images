@@ -50,3 +50,21 @@ This incantation allows `sudo` access and drops into a Bash shell.
 ```bash
 docker run -it --rm -p 8888:8888 -e GRANT_SUDO=yes lisds/lisds-images:002 /bin/bash
 ```
+
+## JupyterHub in general
+
+* <https://hub.jupyter.org/>
+* [JupyterHub on Kubernetes](https://z2jh.jupyter.org/en/stable/) - these
+  contain setup instructions for building your own cluster via
+  [Kubernetes](https://kubernetes.io/).
+* Matthew's version of these scripts, with some extra documentation, for our
+  most recent online course, where we ran our own JupyterHub on Kubernetes:
+  <https://github.com/nipraxis/jupyterhub>.
+* We put the student Docker images up on [our DockerHub
+  space](https://hub.docker.com/u/lisacuk).  In particular, you will find our
+  images [listed here](https://hub.docker.com/r/lisacuk/lishub-base/tags).
+
+## Our Jupyterhub
+
+* <https://ds.lis.2i2c.cloud>
+* To get to the control panel <https://ds.lis.2i2c.cloud/hub/home>.
