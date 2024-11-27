@@ -21,9 +21,12 @@ RUN apt-get update \
         dnsutils \
         git \
         iputils-ping \
-        gcc \
+        gfortran \
         g++ \
+        gcc \
+        cmake \
         make \
+        libopenblas-dev \
         pkg-config \
         libsecret-1-dev \
         zip \
@@ -36,6 +39,10 @@ RUN apt-get update \
         liblzma-dev \
         libbz2-dev \
         ne \
+    # Packages to export as pdf
+        texlive-xetex \
+        texlive-fonts-recommended \
+        texlive-plain-generic \
  && rm -rf /var/lib/apt/lists/*
 
 # Install Quarto
