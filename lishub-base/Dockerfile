@@ -43,6 +43,7 @@ RUN apt-get update \
         texlive-xetex \
         texlive-fonts-recommended \
         texlive-plain-generic \
+        pandoc \
  && rm -rf /var/lib/apt/lists/*
 
 # Install Quarto
@@ -59,6 +60,9 @@ USER $NB_USER
 COPY requirements.txt /tmp/requirements.txt
 RUN python -m pip install --no-cache-dir \
     -r /tmp/requirements.txt
+
+# Tex Path
+RUN export PATH=/Library/TeX/texbin:$PATH
 
 # Support overriding a package or two through passed docker --build-args.
 # ARG PIP_OVERRIDES="jupyterhub==1.3.0"
