@@ -11,21 +11,22 @@ jupyterhub==4.1.5
 # Choose some version, maybe from PyPI, that matches the JupyterHub version.
 nbgitpuller==1.2.1
 
+ipywidgets==8.1.5
 scipy==1.14.0
 matplotlib==3.9.0
 pandas==2.2.2
-meson
-ninja
-statsmodels
-scikit-image
-scikit-learn
-jupytext
+meson==1.6.0
+ninja==1.11.1.2
+statsmodels==0.14.2
+scikit-image==0.24.0
+scikit-learn==1.5.2
+jupytext==1.16.4
 okpy
 folium
 seaborn
 openpyxl
 pyreadstat
-spaCy
+spacy==3.8.2
 nltk
 sympy
 nibabel
@@ -35,7 +36,7 @@ gensim==4.3.2
 numba==0.60.0
 notebook
 nbclassic
-otter-grader
+otter-grader==5.7.1
 pygame
 nbwc
 lxml
@@ -44,6 +45,9 @@ beautifulsoup4
 plotly
 geopandas==1.0.1
 wget
+nbconvert==7.9.2
+jsonschema==4.17.3
+jsonschema-specifications==2023.7.1
 # For ds-100 textbook
 myst_nb
 kaleido
@@ -51,7 +55,9 @@ kaleido
 # To silence Pandas warning for Pandas > 2.1ish.
 pyarrow
 
-ipywidgets
-jupyter-tree-download
+jupyter-tree-download==1.0.1
 git+https://github.com/pxr687/jupyprint.git
-jupyter-resource-usage
+jupyter-resource-usage==1.1.0
+jupyter-server==2.8.0
+jupyter-collaboration
+jupyter_contrib_nbextensions

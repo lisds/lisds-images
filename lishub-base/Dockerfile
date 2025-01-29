@@ -57,6 +57,7 @@ COPY jupyterhub_config.py /etc/jupyterhub/
 
 USER $NB_USER
 
+RUN python -m pip install --upgrade pip
 COPY requirements.txt /tmp/requirements.txt
 RUN python -m pip install --no-cache-dir \
     -r /tmp/requirements.txt
@@ -76,4 +77,6 @@ ENV NBGITPULLER_APP=lab
 
 # Enable interactive widgets
 # https://stackoverflow.com/questions/36351109/ipython-notebook-ipywidgets-does-not-show#38001920
-RUN jupyter nbextension enable --py widgetsnbextension
+#RUN jupyter contrib labextension install --system
+#RUN jupyter nbextension install --py widgetsnbextension
+#RUN jupyter nbextension enable --py widgetsnbextension
