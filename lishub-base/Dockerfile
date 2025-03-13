@@ -39,7 +39,6 @@ RUN apt-get update \
         liblzma-dev \
         libbz2-dev \
         ne \
-        gh-scoped-creds \
     # Packages to export as pdf
         texlive-xetex \
         texlive-fonts-recommended \

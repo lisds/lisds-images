@@ -48,6 +48,7 @@ wget
 nbconvert==7.9.2
 jsonschema==4.17.3
 jsonschema-specifications==2023.7.1
+gh-scoped-creds
 # For ds-100 textbook
 myst_nb
 kaleido
